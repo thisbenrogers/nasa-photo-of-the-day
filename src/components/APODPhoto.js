@@ -21,12 +21,10 @@ function APODPhoto() {
   // TODO edit with ternary to also display video
   return (
     <section className="cards-list">
-      <p>APOD Photo</p>
-      {/* <ReactPlayer url={apodData.url} playing /> */}
       {
         apodData.media_type === "video" ?
-          <ReactPlayer url={apodData.url} playing /> :
-          <img src={apodData.url} alt="Nasa Astonomy Photo of the Day" />
+          <ReactPlayer className="media" url={apodData.url} playing /> :
+          <img className="media" src={apodData.url} alt="Nasa Astonomy Photo of the Day" />
       }
     </section>
   )
