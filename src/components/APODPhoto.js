@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactPlayer from 'react-player'
 import axios from 'axios';
 
 
@@ -21,11 +22,12 @@ function APODPhoto() {
   return (
     <section className="cards-list">
       <p>APOD Photo</p>
-      {/* {
+      {/* <ReactPlayer url={apodData.url} playing /> */}
+      {
         apodData.media_type === "video" ?
-          render video here :
+          <ReactPlayer url={apodData.url} playing /> :
           <img src={apodData.url} alt="Nasa Astonomy Photo of the Day" />
-      } */}
+      }
     </section>
   )
 
