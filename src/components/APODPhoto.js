@@ -13,7 +13,7 @@ function APODPhoto(props) {
           <ReactPlayer className="media" url={props.apodData.url} playing /> :
           <img className="media" src={props.apodData.url} alt="Nasa Astonomy Photo of the Day" />
       }
-    </section>
+    </section >
   )
 
 }
