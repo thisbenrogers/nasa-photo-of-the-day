@@ -16,14 +16,15 @@ function App() {
     display: flex;
     flex-direction: column;
     justify-content: center;
-  `
+    `
 
   const [apodData, setApodData] = useState({});
+
+  // const divider = document.querySelector(".divider");
 
   useEffect(() => {
     axios.get("https://api.nasa.gov/planetary/apod?api_key=acaE6QqfjcI4Nqk2RdyPiuXYlKpuFaSPObtD6KXp")
       .then(response => {
-        console.log("response.data:", response.data);
         const apod = response.data;
         setApodData(apod);
       })
@@ -35,7 +36,7 @@ function App() {
   return (
     <Wrapper>
       <Segment className="App">
-        <Grid verticalAlign='middle' columns={2} relaxed="very">
+        <Grid verticalAlign='middle' columns={2} relaxed="very" stackable>
           <Grid.Column>
             <TextData apodData={apodData} />
           </Grid.Column>
@@ -45,6 +46,7 @@ function App() {
         </Grid>
 
         <Divider vertical> <Icon name="space shuttle" /></Divider>
+        {/* (window.screen.width <= 767) */}
       </Segment>
     </Wrapper>
   );
