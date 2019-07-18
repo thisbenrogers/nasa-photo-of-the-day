@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "APOD API example",
+  "name": "Ben Rogers' project for Lambda School, consuming and serving up from Nasa's APOD API",
   "icons": [
     {
       "src": "favicon.ico",
